@@ -348,6 +348,9 @@ section.contact{
     .hero .left{
         margin-bottom: 8rem;
     }
+    .hero .left img{
+        width:400px;
+    }
     header{
        clip-path:polygon(0 0, 100% 0,100% 100%,90% 94%,0 100%);
     }
@@ -394,6 +397,9 @@ section.contact{
     .hero .left{
         padding-left: 0rem;
         
+    }
+    .hero .left img{
+        width:400px;
     }
     section.about .abt-me-img{
        padding-left: 3rem;
