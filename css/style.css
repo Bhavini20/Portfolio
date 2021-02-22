@@ -43,7 +43,124 @@ header nav .left a:hover{
 header nav{
     padding:1rem 0;
 }
+header nav .line1 {
+        width: 15px;
+        height: 3px;
+        margin: 5px 0;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary)  100%
+        );
+}
+      
+header nav .line2 {
+        width: 30px;
+        height: 3px;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary) 100%
+        );
+}
+header nav .line3 {
+        width: 15px;
+        height: 3px;
+        margin: 5px 0;
+        margin-left: 15px;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary)  100%
+        );
+}
+.menu-icon {
+    cursor: pointer;
+    z-index: 999;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: rgba(55, 55, 55, 0.5);
+    padding: 1.2rem;
+    border-radius: 0% 0% 0% 40%;
+}
 
+.profile-pic {
+    height: 17rem;
+    width: auto;
+    display: block;
+    margin: 1.5rem 0;
+}
+  
+.caption {
+    display: block;
+    text-decoration: none;
+}
+  
+.nav-list {
+    width: 17rem;
+    height: 100%;
+    background-color: var(--dark);
+    position: fixed;
+    top: 0;
+    right: -26rem;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    justify-self: start;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: all 650ms ease-in-out;
+}
+.nav-list.active {
+    right: 0;
+}
+  
+.nav-item {
+    margin: 0.9rem 0;
+}
+  
+.nav-link {
+    opacity: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--pure);
+    letter-spacing: 1.5px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+}
+  
+.nav-link:hover {
+    color: var(--primary)
+}
+.toggle {
+    background: none;
+}
+  
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px) scaleX(2);
+}
+  
+.toggle .line2 {
+    opacity: 0;
+}
+  
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px) scaleX(2);
+    margin-left: 0px;
+}
+@keyframes navLinkAnimate {
+    from {
+      opacity: 0;
+      transform: translate(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0px);
+    }
+}
+  
 header nav .branding{
     margin-right: 5rem;
 }
@@ -206,4 +323,79 @@ section.contact{
     
     background:url(../images/-Website-Background-Web.jpg);  
 }
+@media(max-width:990px){
+    header #desk-nav{
+        display: none;  
+    }
+    header #desk-nav-2{
+        display: none;  
+    }
+}
+/*.mobile-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    background: var(--secondary);
+    width:100%;
+    height: 100%;
+}*/
 
+@media (max-width: 900px) {
+    .hero {
+      display: block;
+    }
+    .hero .left{
+        margin-bottom: 8rem;
+    }
+    header{
+       clip-path:polygon(0 0, 100% 0,100% 100%,90% 94%,0 100%);
+    }
+    
+    section.about p{
+        font-size: 1rem;
+    }
+    
+  }
+  
+@media (max-width: 665px) {
+    .hero {
+        display: block;
+    }
+    .hero .left{
+          margin-bottom: 8rem;
+    }
+    header{
+         clip-path:polygon(0 0, 100% 0,100% 100%,90% 94%,0 100%);
+    }
+     
+    section.about .container{
+        display: block;
+    }
+    section.about .abt-me-img{
+        margin-bottom: 7rem;
+        padding-left: 8rem;
+    }
+    section.about h1{
+        text-align: center;
+    }
+    section.about h3{
+        text-align: center;
+    }
+    section.services .card-wrapper{
+        display: block;
+    }
+
+}
+@media (max-width: 430px) {
+    .hero .left{
+        padding-left: 0rem;
+        
+    }
+    section.about .abt-me-img{
+       padding-left: 3rem;
+    }
+    .section-heading + p{
+        line-height: 1;
+    }
+}
