@@ -387,13 +387,16 @@ section.contact{
     }
 
 }
-@media (max-width: 430px) {
+@media (max-width: 640px) {
     .hero .left{
         padding-left: 0rem;
         
     }
     section.about .abt-me-img{
        padding-left: 3rem;
+    }
+    header .menu-icon{
+        dispaly:block;
     }
     .section-heading + p{
         line-height: 1;
